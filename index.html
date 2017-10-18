@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hello, World! - A-Frame</title>
+    <meta name="description" content="Hello, World! - A-Frame">
+    <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+  </head>
+  <body>
+      <!-- IMAGEN -->
+    <a-scene>
+        <a-assets>
+            <!-- <img id="city" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/city.jpg">
+            <img id="city-thumb" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/thumb-city.jpg">
+            <img id="cubes" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/cubes.jpg">
+            <img id="cubes-thumb" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/thumb-cubes.jpg">
+            <img id="sechelt" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/sechelt.jpg">
+            <img id="sechelt-thumb" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/thumb-sechelt.jpg"> -->
+            <img id="concert" src="/assets/recital.jpg">
+        </a-assets>
+      <a-sky id="image-360" radius="20" src="#concert"></a-sky>
+      <a-entity position="-1 7 -3">
+          <a-sphere radius="3" src="/assets/mars.png" id="mars"></a-sphere>
+          <a-animation attribute="rotation"
+                       dur="25000"
+                       fill="forwards"
+                       to="0 360 0"
+                       repeat="indefinite"></a-animation>
+      </a-entity>
+
+      <a-entity id="parent">
+          <a-sphere color="red" position="-10 10 -5" radius="1" src="/assets/mercury.jpg"></a-sphere>
+          <a-animation attribute="rotation"
+                       dur="35000"
+                       fill="forwards"
+                       to="0 360 0"
+                       repeat="indefinite"></a-animation>
+      </a-entity>
+
+      <a-entity id="parent">
+          <a-sphere position="7 10 -5" radius="1" src="/assets/moon.jpg"></a-sphere>
+          <a-animation attribute="rotation"
+                       dur="35000"
+                       fill="backwards"
+                       direction="reverse"
+                       to="0 360 0"
+                       repeat="indefinite"></a-animation>
+      </a-entity>
+      <a-plane color="#CCC" height="3" width="3" position="1 1 1" src="/assets/RHCP.png"></a-plane>
+    </a-scene>
+
+    <!-- <a-entity>
+  <a-entity position="5 0 0"></a-entity>
+  <a-animation attribute="rotation"
+               dur="10000"
+               fill="forwards"
+               to="0 360 0"
+               repeat="indefinite"></a-animation>
+</a-entity> -->
+
+
+    <!-- VIDEO -->
+    <!-- <a-scene> -->
+      <!-- <a-assets> -->
+        <!-- <video id="360video" autoplay loop="true" src="/assets/360video.mp4"> -->
+      <!-- </a-assets> -->
+      <!-- Using the asset management system. -->
+      <!-- <a-videosphere src="#360video"></a-videosphere> -->
+      <!-- Defining the URL inline. Not recommended but more comfortable for web developers. -->
+      <!-- <a-videosphere src="/assets/360video.mp4"></a-videosphere> -->
+    <!-- </a-scene> -->
+  </body>
+</html>
